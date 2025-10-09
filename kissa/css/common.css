@@ -140,4 +140,9 @@ img {
     color: #ffffff;
     background-color: #736E62;
 }
-/* １４８ページステップ４まで終わったよ！次は同ページステップ５から！！ */
+
+.toggle-menu-button{
+    display: block;
+    width: 44px;
+    height: 34px;
+}
