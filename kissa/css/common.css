@@ -139,10 +139,19 @@ img {
     right: 0;
     color: #ffffff;
     background-color: #736E62;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .toggle-menu-button{
     display: block;
     width: 44px;
     height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
