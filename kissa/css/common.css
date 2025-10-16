@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-body {
+.body {
     font-family:sans-serif;
     font-size: 16px;
     color: #000000;
@@ -26,7 +26,7 @@ body {
     background-color: #ffffff;
 }
 
-img {
+.img {
     max-width: 100%;
 }
 
@@ -128,11 +128,11 @@ img {
     position: relative;
 }
 
-.header-logo{
+.header-logo {
     width: 100px;
 }
 
-.haeder-site-menu{
+.haeder-site-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -144,12 +144,12 @@ img {
     display: none;
 }
 
-.haeder-site-menu.is-show{
+.haeder-site-menu.is-show {
     display: block;
 }
 
 
-.toggle-menu-button{
+.toggle-menu-button {
     display: block;
     width: 44px;
     height: 34px;
@@ -162,7 +162,14 @@ img {
     outline: none;
 }
 
-.main{
+.main {
     padding-top: 50px;
 }
-/* 153ページまで終わったけどボタンの位置がおかしいよ */
+
+.footer-logo {
+    margin-top: 60px;
+}
+
+.footer-tel {
+    margin-top: 50px;
+}
