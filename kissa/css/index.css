@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.first-view{
+    height: calc(100vh - 100px);
+    background-image: url(../images/index/bg-main.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.first-view-textd {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    line-height: 72px;
+}
+
+.first-view-text p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.lead {
+    max-width: 120px;
+    margin: 60px auto;
+}
+/* 182ページの一部やってないかも */
+
+.link-button-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.link-button {
+    background-color: #f4dd64;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    border-radius: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.link-button:hover {
+    background-color: #d8b500;
+}
