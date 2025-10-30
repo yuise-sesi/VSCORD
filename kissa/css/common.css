@@ -97,7 +97,7 @@ a {
     font-weight: bold;
     margin-top: 90px;
 }
-
+/* ここのCSSがおかしいから全体表示の時に不具合が出ていいる */
 @media (max-width: 800px) {
     .site-menu ul {
         display: block;
@@ -159,6 +159,7 @@ a {
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
+    border-radius: 0;
     outline: none;
 }
 

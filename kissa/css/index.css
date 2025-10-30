@@ -37,7 +37,11 @@
     max-width: 120px;
     margin: 60px auto;
 }
-/* 182ページの一部やってないかも */
+
+.lead p {
+    line-height: 2;
+    text-align: center;
+}
 
 .link-button-area {
     text-align: center;
@@ -56,4 +60,31 @@
 
 .link-button:hover {
     background-color: #d8b500;
+}
+
+@media (max-wdth: 800px) {
+    .first-view{
+        height: calc(100vh - 50px);
+        background-image: url(../images/index/bg-main-sp.jpg);
+        align-items: flex-start;
+    }
+
+    .first-view-text {
+        padding-top: 60px;
+        padding-left: 48px;
+    }
+
+    .first-view-text p {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .lead {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .lead p {
+        text-align: left;
+    }
 }
