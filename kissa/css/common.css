@@ -60,11 +60,10 @@ a {
     margin-right: 20px;
 }
 
-.site-menu ul li a{
-    font-family: "Montserrat', sans-serif";
+.site-menu ul li a {
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-
 .footer {
     color: #ffffff;
     background-color: #24211b;
@@ -97,80 +96,84 @@ a {
     font-weight: bold;
     margin-top: 90px;
 }
-/* ここのCSSがおかしいから全体表示の時に不具合が出ていいる */
+
 @media (max-width: 800px) {
     .site-menu ul {
         display: block;
         text-align: center;
     }
+
+    .site-menu li {
+         margin-top: 20px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
     
+    .haeder-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        background-color: #736E62;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: none;
+    }
+    
+    .haeder-site-menu.is-show {
+        display: block;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(../images/common/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent; 
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+
+    .main {
+        padding-top: 50px;
+    }
+
+    .footer-logo {
+        margin-top: 60px;
+    }
+    
+    .footer-tel {
+        font-size: 20px;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
 }
 
-.site-menu li {
-    margin-top: 20px;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    height: 50px;
-    z-index: 10;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-inner {
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
-    position: relative;
-}
-
-.header-logo {
-    width: 100px;
-}
-
-.haeder-site-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    color: #ffffff;
-    background-color: #736E62;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    display: none;
-}
-
-.haeder-site-menu.is-show {
-    display: block;
-}
-
-
-.toggle-menu-button {
-    display: block;
-    width: 44px;
-    height: 34px;
-    background-image: url(../images/common/icon-menu.png);
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    outline: none;
-}
-
-.main {
-    padding-top: 50px;
-}
-
-.footer-logo {
-    margin-top: 60px;
-}
-
-.footer-tel {
-    margin-top: 50px;
-}
+/* 確認修正しボタンを直せた */
