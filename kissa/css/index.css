@@ -91,6 +91,7 @@
     padding-bottom: 10px;
     padding-left: 60px;
     padding-right: 60px;
+    overflow: scroll;
 }
 
 .item-list li {
@@ -102,7 +103,22 @@
 .item-list li:first-child {
     margin-left: 0;
 }
-/* 219ページまで終わった */
+
+.item-list dl {
+    margin-top: 20px;
+}
+
+.item-list dt {
+    font-weight: bold;
+}
+
+.item-list dd {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+
 @media (max-wdth: 800px) {
     .first-view{
         height: calc(100vh - 50px);
@@ -132,5 +148,15 @@
 
     .lead p {
         text-align: left;
+    }
+
+    .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    .item-list li {
+        width: 220px;
+        margin-left: 30px;
     }
 }
