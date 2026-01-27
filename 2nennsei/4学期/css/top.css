@@ -1,9 +1,7 @@
 /* ===== 個人HP全盛期風CSS ===== */
 
 body {
-  background-image:
-    radial-gradient(#7bded9 20%, transparent 20%),
-    radial-gradient(#7bded9 20%, transparent 20%);
+  background-image: url(../image/tophailkei.jpg);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
   font-family: "MS PGothic", Osaka, Arial, sans-serif;

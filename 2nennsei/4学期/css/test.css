@@ -1,0 +1,95 @@
+/* ===================== index.css（モダン版） ===================== */
+
+
+.site-header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-inner h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+
+.nav a {
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+
+.nav a:hover {
+    color: #020617; 
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+.card {
+    background: var(--card);
+    border-radius: 16px;padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+}
+
+
+.card h2 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e293b, #020617);
+    color: #ffffff
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.link-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--subtext);
+    font-size: 0.9rem;
+}
