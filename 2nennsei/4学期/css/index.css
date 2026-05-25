@@ -66,9 +66,9 @@ body {
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 10px 30px rgb(0, 0, 0);
-    margin: 30px auto;   /* 中央寄せ */
-    max-width: 600px;    /* 幅を狭くする */
-    text-align: center;  /* 文字中央 */
+    margin: 30px auto;   
+    max-width: 600px;   
+    text-align: center; 
 }
 
 

@@ -1,0 +1,79 @@
+/* ===================== ranking.css ===================== */
+
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --subtext: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+
+  background-image: url("../image/indexhaikei.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+header {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* メインコンテンツ */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* main内のランキング用見出し想定 */
+main h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-top: 0;
+}
+
+/* ランキング項目想定 */
+main p {
+  line-height: 1.8;
+  color: var(--text);
+  margin: 15px 0;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--subtext);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0, 0, 0, 0.4);
+}
