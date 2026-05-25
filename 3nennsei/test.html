@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趣味でつながるマッチングサービス</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: white;
+      color: #2E7D32;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+
+    .how {
+      background: #eef7ee;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2E7D32;
+      color: white;
+    }
+
+    .start-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .start-btn {
+      padding: 15px 40px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>趣味でつながる、新しい出会い</h1>
+  <p>同じ趣味の仲間と、今すぐマッチして遊ぼう</p>
+  <!-- 本体の登録ページにリンク -->
+  <a href="main.html" class="cta-btn">今すぐ始める</a>
+</header>
+
+<section>
+  <h2>このサービスの特徴</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>🎮 趣味でマッチ</h3>
+      <p>ゲーム、映画、スポーツなど同じ趣味の人と簡単に繋がれる</p>
+    </div>
+    <div class="feature">
+      <h3>⏰ 今ヒマ機能</h3>
+      <p>「今遊べる人」を見つけてすぐに一緒に楽しめる</p>
+    </div>
+    <div class="feature">
+      <h3>💬 チャット</h3>
+      <p>マッチした相手とそのままメッセージでやり取り可能</p>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <h2>使い方</h2>
+  <ol>
+    <li>名前と趣味を登録</li>
+    <li>同じ趣味の人とマッチ</li>
+    <li>チャットして一緒に遊ぶ</li>
+  </ol>
+</section>
+
+<section>
+  <h2>こんな人におすすめ</h2>
+  <ul>
+    <li>一緒にゲームする友達が欲しい</li>
+    <li>暇な時間を誰かと共有したい</li>
+    <li>新しい趣味仲間を見つけたい</li>
+  </ul>
+</section>
+
+<section class="start-section">
+  <h2>さっそく始めよう</h2>
+  <button class="start-btn" onclick="goToApp()">無料でスタート</button>
+</section>
+
+<footer>
+  <p>© 2026 趣味マッチングサービス</p>
+</footer>
+
+<script>
+  function goToApp() {
+    window.location.href = "main.html";
+  }
+</script>
+
+</body>
+</html>

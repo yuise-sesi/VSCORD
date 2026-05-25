@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味マッチング - 暇つぶし掲示板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🤝 趣味マッチング</h1>
+            <p>今すぐ遊べる仲間を探そう！</p>
+        </header>
+
+        <section class="post-form">
+            <h2>📢 メンバーを募集する</h2>
+            <input type="text" id="nameInput" placeholder="ニックネーム">
+            <input type="text" id="hobbyInput" placeholder="趣味（例：ゲーム、カフェ）">
+            <textarea id="msgInput" placeholder="一言メッセージ"></textarea>
+            <button onclick="addPost()">投稿する</button>
+        </section>
+
+        <hr>
+
+        <section class="post-list">
+            <h2>👀 現在の募集一覧</h2>
+            <div id="postsContainer">
+                <p class="empty-msg">まだ投稿はありません。</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function addPost() {
+            const name = document.getElementById('nameInput').value;
+            const hobby = document.getElementById('hobbyInput').value;
+            const msg = document.getElementById('msgInput').value;
+
+            if (!name || !hobby || !msg) {
+                alert("全部入力してね！");
+                return;
+            }
+
+            const container = document.getElementById('postsContainer');
+            
+            // 初回投稿時に「まだ投稿はありません」を消す
+            if (container.querySelector('.empty-msg')) {
+                container.innerHTML = '';
+            }
+
+            // 新しい投稿のHTMLを作成
+            const postCard = document.createElement('div');
+            postCard.className = 'post-card';
+            postCard.innerHTML = `
+                <h3>${hobby} <span>by ${name}</span></h3>
+                <p>${msg}</p>
+                <button class="join-btn" onclick="alert('参加申請を送りました！')">参加する</button>
+            `;
+
+            container.prepend(postCard);
+
+            // 入力欄を空にする
+            document.getElementById('nameInput').value = '';
+            document.getElementById('hobbyInput').value = '';
+            document.getElementById('msgInput').value = '';
+        }
+    </script>
+</body>
+</html>
