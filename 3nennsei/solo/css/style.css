@@ -1,0 +1,229 @@
+/* ==========================================
+   1. 共通設定（ベース）
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 読みやすく落ち着いたフォント環境 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #fcfbfa; /* 温かみのあるオフホワイト */
+    color: #333333;            /* 目に優しい濃いグレー */
+    line-height: 1.8;
+    letter-spacing: 0.05em;   /* 文字間隔を少し広げてゆったりと */
+}
+
+a {
+    color: #4a6b5d;            /* 落ち着いたディープグリーン */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2f453b;            /* ホバー時は少し深い色に */
+}
+
+li {
+    list-style: none;          /* 箇条書きの点を消してスタイリッシュに */
+}
+
+/* ==========================================
+   2. ヘッダー (Header)
+   ========================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eae6e1;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    letter-spacing: 0.1em;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2rem;                 /* メニュー間の余白 */
+}
+
+header nav ul li a {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+header nav ul li a:hover {
+    color: #4a6b5d;
+}
+
+/* ==========================================
+   3. メインコンテンツ (Main)
+   ========================================== */
+main {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+}
+
+/* ヒーローセクション */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #f4f1eb; /* 薄いベージュの背景で上質感を演出 */
+    border-radius: 8px;
+    margin-bottom: 5rem;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: #2b2b2b;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* プロダクトセクション */
+.products h2 {
+    font-size: 1.5rem;
+    color: #2b2b2b;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+/* タイトルの下の一本線 */
+.products h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 1px;
+    background-color: #4a6b5d;
+}
+
+/* 商品リストの並び替え（横並び） */
+.product-list {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;           /* 画面が狭くなったら自動で折り返し */
+}
+
+/* 各商品アイテム */
+.product-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    background-color: #ffffff;
+    border: 1px solid #eae6e1;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01); /* ほんのりとした軽い影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバー時に少しだけ浮き上がらせる上品なアニメーション */
+.product-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.product-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;         /* 画像の比率を崩さずに綺麗にトリミング */
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+    background-color: #f0f0f0; /* 画像がない場合の仮の背景色 */
+}
+
+.product-item h3 {
+    font-size: 1.15rem;
+    color: #2b2b2b;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* HTML内の h3 > li 構造が崩れないための対策 */
+.product-item h3 li {
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.product-item h3 a {
+    font-size: 0.8rem;
+    color: #8a9a86;           /* 外部サイトの補足リンクは一段落としたオリーブ色に */
+    font-weight: normal;
+}
+
+.product-item p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================
+   4. フッター (Footer)
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2b2b2b; /* 全体を引き締めるためにフッターは濃い墨色に */
+    color: #aeaeae;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    margin-top: 6rem;
+}
+/* ==========================================
+   5. JavaScript連携用の追加スタイル
+   ========================================== */
+
+/* ヘッダーを上部にスマートに固定 */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* 変化を滑らかにするための設定 */
+    transition: padding 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* スクロールされた時のヘッダー（JSでクラスが付与される） */
+header.scrolled {
+    padding: 1rem 5%; /* 上下の余白を縮めてスマートに */
+    background-color: rgba(255, 255, 255, 0.92); /* ほんのり背景を透けさせる */
+    backdrop-filter: blur(8px); /* 透けた背景をオシャレにぼかす */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* 軽い影を落とす */
+}
+
+/* フェードインさせる要素の初期状態（最初は透明で、少し下に配置） */
+.fade-in-target {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                transform 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+/* 画面内に入ったときの状態（JSでクラスが付与される） */
+.fade-in-target.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2つのプロダクトカードが、時間差（ディレイ）でポン・ポンと綺麗に並ぶ演出 */
+.product-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
