@@ -1,0 +1,652 @@
+css
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        sans-serif;
+
+    background: #f4f0e8;
+    color: #252525;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6%;
+
+    background: rgba(244, 240, 232, 0.9);
+    backdrop-filter: blur(10px);
+
+    z-index: 100;
+    border-bottom: 1px solid #d8d1c4;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 120px 10% 80px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-small {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    position: relative;
+}
+
+.hero h1 span::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 100%;
+    height: 5px;
+
+    background: #c55a45;
+}
+
+.hero-text {
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.start-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 1px solid #252525;
+
+    font-size: 13px;
+    letter-spacing: 0.12em;
+
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background: #252525;
+    color: #f4f0e8;
+}
+
+
+/* Decorative Japan area */
+
+.hero-map {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+
+    border: 1px solid #d0c8ba;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.japan-mark {
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    transform: rotate(-10deg);
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid #c55a45;
+    border-radius: 50%;
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    right: 30px;
+}
+
+.circle2 {
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+    left: 20px;
+}
+
+.circle3 {
+    width: 25px;
+    height: 25px;
+    bottom: 30px;
+    right: 80px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 130px 30px;
+}
+
+.section-number {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+
+    color: #c55a45;
+
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.3;
+    margin-bottom: 35px;
+}
+
+.section h2 span {
+    color: #c55a45;
+}
+
+.lead {
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    border-top: 1px solid #d8d1c4;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.about-card {
+    padding: 30px;
+
+    background: #ebe5d9;
+
+    border: 1px solid #d8d1c4;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #c55a45;
+
+    color: #c55a45;
+
+    font-weight: bold;
+}
+
+.about-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.about-card p {
+    font-size: 13px;
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.feature {
+    max-width: 900px;
+}
+
+.feature-box {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+
+    padding: 45px 0;
+
+    border-top: 1px solid #d8d1c4;
+}
+
+.feature-box:last-child {
+    border-bottom: 1px solid #d8d1c4;
+}
+
+.feature-number {
+    font-size: 45px;
+    color: #c55a45;
+    font-weight: bold;
+}
+
+.feature-box h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.feature-box p {
+    max-width: 650px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   JAPAN MAP
+========================= */
+
+.map-section {
+    text-align: center;
+}
+
+.map-section .lead {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.japan-map {
+    position: relative;
+
+    width: 100%;
+    max-width: 750px;
+
+    height: 600px;
+
+    margin: 50px auto;
+
+    background:
+        radial-gradient(
+            circle,
+            #e9e2d6 1px,
+            transparent 1px
+        );
+
+    background-size: 20px 20px;
+}
+
+.region {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    height: 75px;
+
+    background: #f4f0e8;
+
+    border: 1px solid #252525;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.region small {
+    font-size: 10px;
+    font-weight: normal;
+    color: #c55a45;
+}
+
+.region:hover {
+    background: #252525;
+    color: #f4f0e8;
+
+    transform: scale(1.08);
+}
+
+
+/* Map positions */
+
+.hokkaido {
+    top: 20px;
+    right: 120px;
+}
+
+.tohoku {
+    top: 150px;
+    right: 180px;
+}
+
+.kanto {
+    top: 260px;
+    right: 190px;
+}
+
+.chubu {
+    top: 300px;
+    left: 280px;
+}
+
+.kinki {
+    top: 350px;
+    left: 180px;
+}
+
+.chugoku {
+    top: 360px;
+    left: 40px;
+}
+
+.shikoku {
+    bottom: 70px;
+    left: 250px;
+}
+
+.kyushu {
+    bottom: 50px;
+    left: 80px;
+}
+
+.okinawa {
+    bottom: 5px;
+    right: 30px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    max-width: 900px;
+}
+
+.story-card {
+    padding: 55px;
+
+    background: #252525;
+
+    color: #f4f0e8;
+}
+
+.story-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+
+    color: #c55a45;
+
+    margin-bottom: 25px;
+}
+
+.story-card h3 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.story-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.story-card p {
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+.more-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    border: 1px solid #f4f0e8;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.more-button:hover {
+    background: #f4f0e8;
+    color: #252525;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    text-align: center;
+
+    padding: 150px 30px;
+
+    background: #c55a45;
+
+    color: #f4f0e8;
+}
+
+.cta p {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+
+    margin-bottom: 25px;
+}
+
+.cta h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.3;
+
+    margin-bottom: 45px;
+}
+
+.start-button.dark {
+    border-color: #f4f0e8;
+}
+
+.start-button.dark:hover {
+    background: #f4f0e8;
+    color: #c55a45;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 8%;
+
+    background: #252525;
+
+    color: #f4f0e8;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+footer small {
+    display: block;
+    margin-top: 30px;
+
+    font-size: 10px;
+    color: #aaa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding-top: 150px;
+    }
+
+    .hero-map {
+        width: 280px;
+        height: 280px;
+
+        margin: 70px auto 0;
+    }
+
+    .japan-mark {
+        font-size: 45px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .japan-map {
+        transform: scale(0.8);
+        transform-origin: top center;
+
+        height: 500px;
+    }
+
+    .feature-box {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .story-card {
+        padding: 30px;
+    }
+
+    .story-card h3 {
+        font-size: 32px;
+    }
+
+    .japan-map {
+        transform: scale(0.65);
+        margin-left: -60px;
+    }
+}

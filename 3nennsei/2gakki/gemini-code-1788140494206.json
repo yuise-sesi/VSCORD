@@ -1,0 +1,20 @@
+{
+  "name": "ふわふわメモ",
+  "short_name": "ふわメモ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFDEE9",
+  "theme_color": "#FFDEE9",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
