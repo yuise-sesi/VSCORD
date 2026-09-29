@@ -1,0 +1,296 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #050505;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    font-family: Arial, sans-serif;
+}
+
+#wall {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #181818 0%,
+            #0b0b0b 50%,
+            #020202 100%
+        );
+
+    cursor: crosshair;
+}
+
+#wall::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.2;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,0.025) 4px
+        );
+}
+
+.warning {
+    position: absolute;
+
+    top: 25px;
+    left: 30px;
+
+    z-index: 20;
+
+    color: rgba(255,255,255,0.3);
+
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.hint {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    color: rgba(255,255,255,0.3);
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: opacity 0.5s;
+}
+
+#wall.active .hint {
+    opacity: 0;
+}
+
+#cracks {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   亀裂
+========================= */
+
+.crack-svg {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: visible;
+}
+
+.crack-main {
+    fill: none;
+
+    stroke: rgba(240,240,240,0.9);
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    filter:
+        drop-shadow(
+            0 0 4px
+            rgba(255,255,255,0.4)
+        );
+}
+
+.crack-old {
+    stroke: rgba(170,170,170,0.55);
+
+    stroke-width: 2;
+}
+
+
+/* =========================
+   赤いエネルギー
+========================= */
+
+.leak {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,40,40,0.95),
+            rgba(150,0,0,0.55) 40%,
+            transparent 75%
+        );
+
+    filter: blur(3px);
+
+    animation:
+        leak-grow 2s ease-out forwards;
+}
+
+@keyframes leak-grow {
+
+    0% {
+        width: 5px;
+        height: 5px;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.9;
+    }
+
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================
+   赤い流れ
+========================= */
+
+.drip {
+    position: absolute;
+
+    width: 4px;
+
+    height: 0;
+
+    border-radius:
+        0 0 10px 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(220,0,0,0.8),
+            rgba(80,0,0,0.2)
+        );
+
+    box-shadow:
+        0 0 7px
+        rgba(180,0,0,0.5);
+
+    animation:
+        drip-grow 2s ease-out forwards;
+}
+
+@keyframes drip-grow {
+
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        height: var(--height);
+        opacity: 0.4;
+    }
+}
+
+
+/* =========================
+   画面の赤いフラッシュ
+========================= */
+
+.red-flash {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    background:
+        rgba(150,0,0,0.12);
+
+    animation:
+        flash 0.7s ease-out forwards;
+}
+
+@keyframes flash {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   ノイズ
+========================= */
+
+.noise {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 15;
+
+    pointer-events: none;
+
+    opacity: 0.06;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,0.6) 1px,
+            transparent 1px
+        );
+
+    background-size: 4px 4px;
+}

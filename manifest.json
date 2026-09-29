@@ -1,0 +1,11 @@
+
+{
+    "name": "THE CRACK",
+    "short_name": "THE CRACK",
+    "description": "亀裂の向こう側から何かが漏れ出している。",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#050505",
+    "orientation": "portrait"
+}
