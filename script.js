@@ -10,7 +10,7 @@ let path = null;
 
 let lastLeakX = 0;
 let lastLeakY = 0;
-
+let redLine = null;
 
 /* =================================
    SVGを作る
@@ -40,6 +40,18 @@ function createCrackSVG() {
 
     svg = newSvg;
     path = newPath;
+}
+
+function createRedLine() {
+
+    redLine = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path"
+    );
+
+    redLine.classList.add("red-line");
+
+    svg.appendChild(redLine);
 }
 
 
@@ -97,6 +109,7 @@ function startDrawing(x, y) {
     ];
 
     createCrackSVG();
+    createRedLine();
 
     wall.classList.add("active");
 
@@ -152,6 +165,25 @@ function moveDrawing(x, y) {
 
     updateCrack();
 
+    if (redLine) {
+
+    const redD =
+        "M " +
+        points[0].x +
+        " " +
+        points[0].y;
+
+    for (let i = 1; i < points.length; i++) {
+
+        redD +=
+            " L " +
+            points[i].x +
+            " " +
+            points[i].y;
+    }
+
+    redLine.setAttribute("d", redD);
+}
 
     /*
      * 一定距離進むと
@@ -242,9 +274,10 @@ function stopDrawing() {
 
 
     points = [];
-
+    
     svg = null;
     path = null;
+    redLine = null;
 }
 
 
